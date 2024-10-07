@@ -23,5 +23,7 @@ flutter:
 
   assets:
     - assets/images/halloween.jpeg 
+    - assets/images/ghost.png
+    - assets/images/zombie.png
 
 
