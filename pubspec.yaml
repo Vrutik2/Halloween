@@ -12,6 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.8
+  audioplayers: ^6.1.0
 
 dev_dependencies:
   flutter_test:
@@ -19,11 +20,13 @@ dev_dependencies:
   flutter_lints: ^4.0.0
 
 flutter:
-  uses-material-design: true
-
   assets:
-    - assets/images/halloween.jpeg 
+    - assets/scary.mp3
+    - assets/images/halloween.jpeg
     - assets/images/ghost.png
     - assets/images/zombie.png
+    - assets/images/pumpkin.png
+    - assets/images/trap.png
+
 
 
