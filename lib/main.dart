@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'dart:math'; // Import to use Random
+import 'dart:math'; 
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 
@@ -36,8 +36,8 @@ class _MyHomePageState extends State<MyHomePage> {
   final AudioPlayer _audioPlayer = AudioPlayer();
   double ghostPosition = -100;
   double zombiePosition = -100;
-  double pumpkinPosition = 200; // Position of the correct item
-  double trapPosition = 400; // Position of the trap
+  double pumpkinPosition = 200; 
+  double trapPosition = 400; 
   bool isFound = false;
 
   @override
@@ -51,8 +51,8 @@ class _MyHomePageState extends State<MyHomePage> {
     try {
       print("Attempting to load audio from: assets/scary.mp3");
       await _audioPlayer.setSource(AssetSource('assets/scary.mp3'));
-      await _audioPlayer.setReleaseMode(ReleaseMode.loop); // Loop the background music
-      await _audioPlayer.resume(); // Play the audio
+      await _audioPlayer.setReleaseMode(ReleaseMode.loop); 
+      await _audioPlayer.resume(); 
       print("Background music is playing");
     } catch (e) {
       print('Error playing background music: $e');
@@ -61,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   void dispose() {
-    _audioPlayer.stop(); // Stop the music when disposing
+    _audioPlayer.stop(); 
     _audioPlayer.dispose();
     super.dispose();
   }
@@ -71,27 +71,27 @@ class _MyHomePageState extends State<MyHomePage> {
       setState(() {
         ghostPosition += 1;
         zombiePosition += 1;
-        pumpkinPosition += 1; // Update pumpkin position
-        trapPosition += 1; // Update trap position
+        pumpkinPosition += 1; 
+        trapPosition += 1; 
 
-        // Reset ghost position
+        
         if (ghostPosition > MediaQuery.of(context).size.width) {
           ghostPosition = -100;
         }
 
-        // Reset zombie position
+        
         if (zombiePosition > MediaQuery.of(context).size.width) {
           zombiePosition = -100;
         }
 
-        // Reset pumpkin position
+        
         if (pumpkinPosition > MediaQuery.of(context).size.width) {
-          pumpkinPosition = -100; // Reset to the left of the screen
+          pumpkinPosition = -100; 
         }
 
-        // Reset trap position
+        
         if (trapPosition > MediaQuery.of(context).size.width) {
-          trapPosition = -100; // Reset to the left of the screen
+          trapPosition = -100; 
         }
       });
     });
